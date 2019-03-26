@@ -1,0 +1,17 @@
+<div class="card-columns">
+    <div class="card" *ngFor="let heroe of heroes; let i = index;">
+        <img [src]="heroe.img" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+            <p class="card-text">{{heroe.aparicion}}</p>
+            <p class="card-text"><small class="text-muted">{{heroe.casa}}</small></p>
+            <input type="button" class="btn btn-block btn-primary" value="Ver Más ..." (click)="verHeroe(i)">
+            <!--[routerLink]="['/heroe',i]"-->
+        </div>
+
+    </div>
+</div>
+<!--hay 2 formas de pasar id mediante la url : 
+            1-. es utilizar <input type="button" class="btn btn-block btn-primary" value="Ver Más ..." [routerLink]="['/heroe',i]"> routerlink y pasarle la url y listo o..
+          2-. es por medio de programacion, es decir, hacer un evento (click) = "verHeroe(i)" y en el metodo recibir por parametro el id y luego usar el obj Router en el contructor para crearlo.. en
+        el metodo usar this.router.navigate(['/heroe',id]) y listop  -->

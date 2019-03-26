@@ -1,0 +1,14 @@
+<div class="card-columns" *ngIf="busquedaHeroe !=null">
+    <div class="card">
+        <img [src]="busquedaHeroe.img" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{busquedaHeroe.nombre}}</h5>
+            <p class="card-text">{{busquedaHeroe.aparicion}}</p>
+            <p class="card-text"><small class="text-muted">{{busquedaHeroe.casa}}</small></p>
+
+
+        </div>
+
+    </div>
+</div>
+<h1 *ngIf="busquedaHeroe ==null"> No se encontraron resultados</h1>
